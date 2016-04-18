@@ -36,7 +36,7 @@ showSingleMenu = (robot, res, restaurant, day, type) ->
     res.reply result
 
 module.exports = (robot) ->
-  robot.respond /(?:what's|what is) (?:the menu|for lunch)( in R2)? *(?:for|on)? *(tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday)?/i, (res) ->
+  robot.respond /(?:what's|what is) (?:the menu |for lunch )(in R2)? *(?:for|on)? *(tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday)?/i, (res) ->
     restaurant = 'r1'
     if res.match[1]
       restaurant = 'r2'
@@ -44,7 +44,7 @@ module.exports = (robot) ->
     showMenu robot, res, restaurant, day
     return
 
-  robot.respond /(?:what's|what is) the (\w+) (?:menu|lunch)( in R2)? *(?:for|on)? *(tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday)?/i, (res) ->
+  robot.respond /(?:what's|what is) the (\w+) (?:menu|lunch|option|)( in R2)? *(?:for|on)? *(tomorrow|Monday|Tuesday|Wednesday|Thursday|Friday)?/i, (res) ->
     type = res.match[1] || 'menu1'
     if type == 'murder'
       type = 'menu1'
