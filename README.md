@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # beautybot
 
 beautybot is a chat bot built on the [Hubot][hubot] framework. It was
@@ -212,3 +213,6 @@ Add the subdomain hubot should connect to. If you web URL looks like
 
 You may want to get comfortable with `heroku logs` and `heroku restart` if
 you're having issues.
+=======
+# gloriousleader
+>>>>>>> b70a36a7ad59dd5ad31904da66c50dd0b17b69d7
